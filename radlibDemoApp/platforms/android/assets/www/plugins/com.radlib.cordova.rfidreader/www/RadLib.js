@@ -12,7 +12,7 @@ var tsl1128 = require("./ReaderTSL_1128_UHF");
 //create empty object to be exported
 var radlib = {};
 
-radlib.directConnect = function(success, failure, reader, mode) {
+radlib.connect = function(success, failure, reader, mode) {
    switch(reader.connection) {
       case "BLUETOOTH":
          console.log("You've requested Bluetooth!");

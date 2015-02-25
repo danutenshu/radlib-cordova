@@ -38,10 +38,10 @@ function getStream() {
       bluetoothUtils.stopDiscovery(dumpLog, dumpLog);
    }
    else if (selectedReader == "tsl_1128") {
-      radlib.directConnect(dumpLog, dumpLog, objTSL1128, "STREAM");
+      radlib.connect(dumpLog, dumpLog, objTSL1128, "STREAM");
    }
    else if (selectedReader == "rc522_lf") {
-      radlib.directConnect(dumpLog, dumpLog, objRC522, "STREAM");
+      radlib.connect(dumpLog, dumpLog, objRC522, "STREAM");
    }
    else {
       alert("Please select a reader");
@@ -56,10 +56,10 @@ function getParsed() {
       radlib.scanReaders(deleteMe, dumpLog, ["BLUETOOTH"]);
    }
    else if (selectedReader == "tsl_1128") {
-      radlib.directConnect(updateTable, dumpLog, objTSL1128, "PARSED");
+      radlib.connect(updateTable, dumpLog, objTSL1128, "PARSED");
    }
    else if (selectedReader == "rc522_lf") {
-      radlib.directConnect(updateTable, dumpLog, objRC522, "PARSED");
+      radlib.connect(updateTable, dumpLog, objRC522, "PARSED");
    }
    else {
       alert("Please select a reader");
